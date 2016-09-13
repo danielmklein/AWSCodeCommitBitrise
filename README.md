@@ -1,7 +1,7 @@
 Integrating AWS CodeCommit with Bitrise
 =======================================
 
-1) Setting up/Connecting a Repository
+1. Setting up/Connecting a Repository
   * If you store your source code on AWS CodeCommit, and you want to start using the Bitrise CI platform, 
   this setup can seem daunting (and even impossible). Connecting an AWS CodeCommit repository is probably the most complicated part of using Bitrise, 
   but it's not hard to do, and once its done, CodeCommit behaves just about like any other popular hosted source control service.
@@ -22,7 +22,7 @@ Integrating AWS CodeCommit with Bitrise
   * The good part: if you have multiple repositories to connect to Bitrise, you can use the _same_ keypair for all of them, 
   if you wish, so you don't have to go through this backtracking process for every repository.
   * If you _do_ already have a keypair handy that you want to use for Bitrise integration, just start at step 7.
-2) Triggering a build on push
+2. Triggering a build on push
   * One of the downsides to using AWS CodeCommit is that it does not provide a native webhook mechanism 
   like what you get with GitHub or other popular hosted source control providers.
   * On the other hand, given that CodeCommit is part of the AWS ecosystem, we have an arsenal of handy tools and services
