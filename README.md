@@ -6,19 +6,19 @@ Integrating AWS CodeCommit with Bitrise
   this setup can seem daunting (and even impossible). Connecting an AWS CodeCommit repository is probably the most complicated part of using Bitrise, 
   but it's not hard to do, and once its done, CodeCommit behaves just about like any other popular hosted source control service.
   * Here's how to connect a repo (assuming you don't already have a keypair)
-    1) Create an IAM user specifically for Bitrise CodeCommit access (make sure it has the proper CodeCommit permissions).
-    1) Start the "Add an App" process, and under "Connect your repository," select "Own/Manual."
-    1) Input a repo URL (it doesn't actually matter what it is at this point, as long as it's a valid SSH URL).
-    1) Select "Automatic" for SSH key, so that Bitrise generates a keypair for you, and copy the generated public key; 
+    1. Create an IAM user specifically for Bitrise CodeCommit access (make sure it has the proper CodeCommit permissions).
+    2. Start the "Add an App" process, and under "Connect your repository," select "Own/Manual."
+    3. Input a repo URL (it doesn't actually matter what it is at this point, as long as it's a valid SSH URL).
+    4. Select "Automatic" for SSH key, so that Bitrise generates a keypair for you, and copy the generated public key; 
     attach this public key to the user created in step 1, and take note of the SSH Key ID.
-    1) Now copy the generated _private_ key and store it somewhere safe.
-    1) Next, click "Restart" at the top of the page to start this process over (I know... trust me).
-    1) This time around, select "Other/Manual" again for the repo type, and input the SSH URL to your repo 
+    5. Now copy the generated _private_ key and store it somewhere safe.
+    6. Next, click "Restart" at the top of the page to start this process over (I know... trust me).
+    7. This time around, select "Other/Manual" again for the repo type, and input the SSH URL to your repo 
     in the form of "ssh://{SSH_KEY_ID}@{REPO_URL}". 
         * Here, {SSH_KEY_ID} is the ID of the key you attached the IAM user we mentioned earlier, and
         {REPO_URL} is the SSH clone URL of your repository (minus the "ssh://" prefix). 
-    1) Next, click "Add Own SSH" and paste in the SSH private key from before (you did save that somewhere _safe_, didn't you?).
-    1) Now Bitrise will validate your repo, and you should be good to go!
+    8. Next, click "Add Own SSH" and paste in the SSH private key from before (you did save that somewhere _safe_, didn't you?).
+    9. Now Bitrise will validate your repo, and you should be good to go!
   * The good part: if you have multiple repositories to connect to Bitrise, you can use the _same_ keypair for all of them, 
   if you wish, so you don't have to go through this backtracking process for every repository.
   * If you _do_ already have a keypair handy that you want to use for Bitrise integration, just start at step 7.
